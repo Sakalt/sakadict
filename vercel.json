@@ -2,22 +2,22 @@
   "version": 2,
   "builds": [
     {
-      "src": "component/public/static/index.html",
+      "src": "client/public/index.html",
       "use": "@vercel/node"
     },
     {
-      "src": "dist/worker.js",
+      "src": "client/public/index.html",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "component/public/static/index.html"
+      "dest": "component/public/index.html"
     },
     {
       "src": "/worker/(.*)",
-      "dest": "component/public/static/index.html"
+      "dest": "component/public/index.html"
     }
   ],
   "env": {
